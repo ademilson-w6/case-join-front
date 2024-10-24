@@ -1,0 +1,61 @@
+<div class="container-xl">
+  <div class="table-responsive">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4><b>Visualizar produto</b></h4>
+          </div>
+          <div class="col-sm-6">
+            <a href="#" routerLink="/Home" class="btn btn-success back"><i class='fas fa-arrow-circle-left'></i> &nbsp;Back</a>
+          </div>
+        </div>
+      </div>
+      <table class="table table-striped table-hover table-bordered table-content">
+        <tbody>
+          <tr>
+            <td>
+              <label><b>Sku</b></label>
+            </td>
+            <td>
+              <span>{{ productDetail.sku }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label><b>Nome</b></label>
+            </td>
+            <td>
+              <span>{{ productDetail.nome }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label><b>Descricao</b></label>
+            </td>
+            <td>
+              <span>{{ productDetail.descricao }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label><b>Valor unitário</b></label>
+            </td>
+            <td>
+              <span>{{ productDetail.valorUnitario }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label><b>Categoria</b></label>
+            </td>
+            <td>
+              <span>Categoria</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

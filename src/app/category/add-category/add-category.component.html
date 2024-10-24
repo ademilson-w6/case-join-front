@@ -1,0 +1,53 @@
+<div class="container-xl">
+  <div class="table-responsive">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4><b>New Categoria</b></h4>
+          </div>
+          <div class="col-sm-6">
+            <a href="#" routerLink="/Home" class="btn btn-success back"><i class='fas fa-arrow-circle-left'></i>
+              &nbsp;Back</a>
+          </div>
+        </div>
+      </div>
+      <form #categoryForm="ngForm">
+        <div class="table-content">
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label for="Nome" class="p-t-b-10">Nome<span class="requiredStar">*</span></label>
+            </div>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="Nome" required maxlength="255"
+                [(ngModel)]="addCategoryForm.nome" name="Nome" #Nome="ngModel">
+              <div *ngIf="Nome.errors && isSubmitted" class="alert alert-danger validationError">
+                <div [hidden]="!Nome.errors?.['required']">
+                  First Name is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label for="Descricao" class="p-t-b-10">Descricao<span class="requiredStar">*</span></label>
+            </div>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="Descricao" required maxlength="255"
+                [(ngModel)]="addCategoryForm.descricao" name="Descricao" #Descricao="ngModel">
+              <div *ngIf="Descricao.errors && isSubmitted" class="alert alert-danger validationError">
+                <div [hidden]="!Descricao.errors?.['required']">
+                  Last Name is required
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="table-footer">
+          <button class="btn btn-success" (click)="AddCategory(categoryForm.form.valid)">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
