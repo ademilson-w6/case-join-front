@@ -26,6 +26,7 @@ export class LoginComponent {
   constructor(private router: Router, private httpProvider: HttpProviderService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
+
   }
 
   Login(isValid: any) {
